@@ -37,6 +37,10 @@ The `unicorns` database, contains the following tables:
 | country      | The country where the company is headquartered.   |
 | continent    | The continent where the company is headquartered. |
 
+Our final query should return the industry, the year, the number of companies in these industries that became unicorns each year in 2019, 2020, and 2021, along with the average valuation per industry per year, converted to billions of dollars and rounded to two decimal places!
+
+As the firm is interested in trends for the top-performing industries, our results should be displayed by industry, then year in descending order.
+
  ### 1. Find the three (3) best performing industries based on the number of new unicorns created over three (3) years (2019,2020 and 2021) combined.
 
 ``` python
