@@ -5,6 +5,37 @@ new high-value companies are emerging. Providing them with this
 information gives them a competitive insight as to industry trends and
 how they should structure their portfolio looking forward.
 
+The `unicorns` database, contains the following tables:
+
+`dates`
+| Column       | Description                                  |
+|------------- |--------------------------------------------- |
+| company_id   | A unique ID for the company.                 |
+| date_joined  | The date that the company became a unicorn.  |
+| year_founded | The year that the company was founded.       |
+
+`funding`
+| Column           | Description                                  |
+|----------------- |--------------------------------------------- |
+| company_id       | A unique ID for the company.                 |
+| valuation        | Company value in US dollars.                 |
+| funding          | The amount of funding raised in US dollars.  |
+| select_investors | A list of key investors in the company.      |
+
+`industries`
+| Column       | Description                                  |
+|------------- |--------------------------------------------- |
+| company_id   | A unique ID for the company.                 |
+| industry     | The industry that the company operates in.   |
+
+`companies`
+| Column       | Description                                       |
+|------------- |-------------------------------------------------- |
+| company_id   | A unique ID for the company.                      |
+| company      | The name of the company.                          |
+| city         | The city where the company is headquartered.      |
+| country      | The country where the company is headquartered.   |
+| continent    | The continent where the company is headquartered. |
 
  ### 1. Find the three (3) best performing industries based on the number of new unicorns created over three (3) years (2019,2020 and 2021) combined.
 
