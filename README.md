@@ -41,6 +41,8 @@ Our final query should return the industry, the year, the number of companies in
 
 As the firm is interested in trends for the top-performing industries, our results should be displayed by industry, then year in descending order.
 
+#
+
  ### 1. Find the three (3) best performing industries based on the number of new unicorns created over three (3) years (2019,2020 and 2021) combined.
 
 ``` python
@@ -55,8 +57,13 @@ GROUP BY i.industry
 ORDER BY count_new_unicorns DESC
 LIMIT 3;
 ```
+|       | industry | count_new_unicorns |
+|-------|-------|-------|
+| 0 | Fintech | 173 |
+| 1 | Internet software & services | 152 |
+| 2 | E-commerce & direct-to-consumer |   75 |
 
-<img width="600" alt="Analyse Unicorn Companies 1" src="https://github.com/Marvykeys/Analyzing-Unicorn-Companies/assets/130637591/4dde94ba-6333-4e35-8181-12c0d2afb40e">
+#
 
 ### 2. Calculate the number of unicorns and the average valuation, grouped by year and industry.
 
@@ -74,7 +81,20 @@ ON d.company_id = f.company_id
 GROUP BY industry, year;
 ```
 
-<img width="600" alt="Analyse Unicorn Companies 2" src="https://github.com/Marvykeys/Analyzing-Unicorn-Companies/assets/130637591/c81c8cbc-4967-4279-a6a0-676fe2b2af99">
+|          | industry | year  | num_unicorns | average_valuation | 
+|-------|-------|-------|------|------|
+| 0 | Mobile & telecommunications | 2017 | 5 | 2800000000 |
+| 1 | Internet software & services | 2015 | 4 | 1250000000 |
+| 2 | Fintech | 2018 | 10 | 8600000000 |
+| 3 | Mobile & telecommunications | 2019 | 4 | 2000000000 |
+| 4 |Artificial intelligence | 2012 | 1 | 2000000000 |
+| 5 | Fintech | 2015 | 2 | 5500000000 |
+| 6 | Hardware | 2020 | 1 | 2000000000 |
+| 7 | Data Management & analaytics | 2019 | 4 | 11500000000 |
+| 8 | Supply chain, logistics & delivery | 2018 | 11 | 3454545454.5454545 |
+| 9 | Travel | 2017 | 2 | 2000000000 |
+
+#
 
 ### 3. Create two (2) CTEs for the two (2) tables above, then run the final query. 
 
@@ -113,5 +133,16 @@ WHERE year IN (2019, 2020, 2021)
 GROUP BY industry, num_unicorns, year
 ORDER BY industry, year DESC;
 ```
-<img width="600" alt="Analyse Unicorn Companies 2" src="https://github.com/Marvykeys/Analyzing-Unicorn-Companies/assets/130637591/17e354a7-e5c5-4537-9ec4-3ed7368539ff">
+|          | industry | year  | num_unicorns | average_valuation | 
+|-------|-------|-------|------|------|
+| 0 | Mobile & telecommunications | 2017 | 5 | 2800000000 |
+| 1 | Internet software & services | 2015 | 4 | 1250000000 |
+| 2 | Fintech | 2018 | 10 | 8600000000 |
+| 3 | Mobile & telecommunications | 2019 | 4 | 2000000000 |
+| 4 |Artificial intelligence | 2012 | 1 | 2000000000 |
+| 5 | Fintech | 2015 | 2 | 5500000000 |
+| 6 | Hardware | 2020 | 1 | 2000000000 |
+| 7 | Data Management & analaytics | 2019 | 4 | 11500000000 |
+| 8 | Supply chain, logistics & delivery | 2018 | 11 | 3454545454.5454545 |
+| 9 | Travel | 2017 | 2 | 2000000000 |
 
